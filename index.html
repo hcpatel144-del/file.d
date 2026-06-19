@@ -1,32 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>file.d documentation</title>
-  <link rel="icon" type="image/png" href="/file.d/static/file.d.png" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="A blazing fast tool for building data pipelines: read, process, and output events.">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Madam Ji ❤️</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#d9c2ff,#f1e6ff,#e8d7ff);
+    min-height:100vh;
+    color:#4a3b63;
+}
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+.heart{
+    position:absolute;
+    bottom:-50px;
+    color:rgba(255,255,255,0.7);
+    animation:float 10s linear infinite;
+}
+@keyframes float{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+    position:relative;
+    z-index:2;
+}
+.glass{
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.25);
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:25px;
+    padding:35px;
+    width:min(95%,900px);
+    box-shadow:0 8px 30px rgba(0,0,0,0.12);
+}
+h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+.subtitle{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+.btn{
+    margin-top:25px;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:1rem;
+    background:#8d6fd1;
+    color:white;
+    transition:.3s;
+}
+.btn:hover{
+    transform:translateY(-3px);
+}
+.section{
+    padding:70px 20px;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    z-index:2;
+}
+.section-card{
+    width:min(95%,1000px);
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.25);
+    border-radius:25px;
+    padding:30px;
+}
+.section-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+.upload-area{
+    text-align:center;
+    margin-bottom:25px;
+}
+input[type=file]{
+    margin-top:10px;
+}
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:.4s;
+}
+.gallery img:hover{
+    transform:scale(1.03);
+}
+.letter{
+    line-height:2;
+    font-size:1.1rem;
+}
+.qualities{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+.quality{
+    background:rgba(255,255,255,0.35);
+    padding:18px;
+    border-radius:15px;
+    text-align:center;
+}
+.final{
+    text-align:center;
+}
+.hidden{
+    display:none;
+}
+.answer{
+    margin-top:25px;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+.confetti{
+    position:fixed;
+    top:-10px;
+    width:10px;
+    height:10px;
+    animation:fall 4s linear forwards;
+}
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+audio{
+    margin-top:20px;
+    width:100%;
+}
+@media(max-width:600px){
+    h1{
+        font-size:2.2rem;
+    }
+}
+</style>
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'file.d',
-      repo: 'https://github.com/ozontech/file.d',
-      loadSidebar: true,
-      loadNavbar: true,
-      subMaxLevel: 2,
-      maxLevel: 1,
-      coverpage: true,
-      auto2top: true,
-      markdown: {
-        gfm: true
-      }
+<div class="hearts" id="hearts"></div>
+<section class="hero">
+<div class="glass">
+<h1>For Madam Ji ❤️</h1>
+<p class="subtitle">
+This page is made with love, honesty, and a sincere apology.
+I never wanted my words to hurt you.
+I only wanted to tell you how much I admire you.
+</p>
+<button class="btn" onclick="document.getElementById('gallerySection').scrollIntoView({behavior:'smooth'})">
+Enter ❤️
+</button>
+</div>
+</section>
+<section class="section" id="gallerySection">
+<div class="section-card">
+<h2 class="section-title">Our Photos 📸</h2>
+<div class="upload-area">
+<p>Upload your favorite photos together and photos of her.</p>
+<input type="file" id="photoUpload" multiple accept="image/*">
+</div>
+<div class="gallery" id="gallery"></div>
+</div>
+</section>
+<section class="section">
+<div class="section-card">
+<h2 class="section-title">A Small Apology 💜</h2>
+<div class="letter">
+<p>
+Madam Ji,
+</p>
+<p>
+When I said that you're not girlfriend material but wifey material,
+I genuinely meant it as one of the highest compliments I could give.
+I admire your character, your maturity, your kindness,
+and the way you handle things.
+</p>
+<p>
+But I also understand that intentions and impact are not always the same.
+Even though I meant something beautiful,
+my words ended up hurting you.
+For that, I am truly sorry.
+</p>
+<p>
+You are someone I deeply respect,
+and the last thing I ever want is to make you feel unappreciated or misunderstood.
+</p>
+<p>
+Thank you for being you. ❤️
+</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-card">
+<h2 class="section-title">Things I Admire About You ✨</h2>
+<div class="qualities">
+<div class="quality">❤️ Your Kind Heart</div>
+<div class="quality">🌸 Your Maturity</div>
+<div class="quality">🌟 Your Character</div>
+<div class="quality">😊 Your Smile</div>
+<div class="quality">💜 Your Presence</div>
+<div class="quality">🌷 The Way You Care</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-card final">
+<h2>One Last Thing... ❤️</h2>
+<p style="margin-top:15px;">
+Can I have my favorite smile back? 😊
+</p>
+<button class="btn" onclick="showLove()">
+Yes ❤️
+</button>
+<button class="btn" onclick="showThinking()">
+Still Thinking 😌
+</button>
+<div id="response" class="answer hidden"></div>
+<div style="margin-top:30px;">
+<h3>Background Music 🎵</h3>
+<p style="margin-top:10px;">
+Upload your chosen song here.
+</p>
+<input type="file" id="musicUpload" accept="audio/*">
+</div>
+</div>
+</section>
+<script>
+for(let i=0;i<35;i++){
+    const heart=document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML='❤';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(Math.random()*25+15)+'px';
+    heart.style.animationDuration=(Math.random()*6+6)+'s';
+    heart.style.animationDelay=Math.random()*5+'s';
+    document.getElementById('hearts').appendChild(heart);
+}
+const upload=document.getElementById('photoUpload');
+const gallery=document.getElementById('gallery');
+upload.addEventListener('change',function(){
+    gallery.innerHTML='';
+    [...this.files].forEach(file=>{
+        const reader=new FileReader();
+        reader.onload=function(e){
+            const img=document.createElement('img');
+            img.src=e.target.result;
+            gallery.appendChild(img);
+        }
+        reader.readAsDataURL(file);
+    });
+});
+function showLove(){
+    const box=document.getElementById('response');
+    box.classList.remove('hidden');
+    box.innerHTML=
+    "Thank you. That's all I wanted. Knowing you're smiling again means the world to me. ❤️";
+    for(let i=0;i<120;i++){
+        let conf=document.createElement('div');
+        conf.className='confetti';
+        conf.style.left=Math.random()*100+'vw';
+        conf.style.background='hsl('+Math.random()*360+',80%,70%)';
+        document.body.appendChild(conf);
+        setTimeout(()=>conf.remove(),4000);
     }
-  </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify-copy-code"></script>
+}
+function showThinking(){
+    const box=document.getElementById('response');
+    box.classList.remove('hidden');
+    box.innerHTML=
+    "Take all the time you need. I'll still be here, and I still care about you. 💜";
+}
+const musicUpload=document.getElementById('musicUpload');
+const audioPlayer=document.getElementById('audioPlayer');
+musicUpload.addEventListener('change',function(){
+    const file=this.files[0];
+    if(file){
+        const url=URL.createObjectURL(file);
+        audioPlayer.src=url;
+    }
+});
+</script>
 </body>
 </html>
